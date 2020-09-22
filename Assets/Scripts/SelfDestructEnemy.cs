@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class SelfDestructEnemy : MonoBehaviour
 {
-    public GameObject EnemyObject;
-    public Transform Spawner;
 
     public Text scoreText;
 
@@ -25,7 +23,6 @@ public class SelfDestructEnemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; //Find player
         target = new Vector2(player.position.x, player.position.y); //On start follow player
-        InvokeRepeating("SpawnDestructEnemy", 10, 10);
     }
 
     // Update is called once per frame
@@ -72,10 +69,5 @@ public class SelfDestructEnemy : MonoBehaviour
     void Die()
     {
         Destroy(this.gameObject);
-    }
-
-    void SpawnDestructEnemy()
-    {
-        Instantiate(EnemyObject, Spawner.position, Quaternion.identity);
     }
 }

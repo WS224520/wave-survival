@@ -5,7 +5,10 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject EnemyObject;
+    public GameObject DestructEnemyObject;
+
     public Transform EnemySpawner;
+    public Transform DestructEnemySpawner;
 
     /*
     public GameObject[] obstaclePatterns;
@@ -20,6 +23,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnEnemy", 5, 5);
+        InvokeRepeating("SpawnDestructEnemy", 10, 10);
     }
 
     //Spawner that picks out a random value in the array
@@ -47,5 +51,10 @@ public class Spawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(EnemyObject, EnemySpawner.position, Quaternion.identity);
+    }
+
+    void SpawnDestructEnemy()
+    {
+        Instantiate(EnemyObject, DestructEnemySpawner.position, Quaternion.identity);
     }
 }

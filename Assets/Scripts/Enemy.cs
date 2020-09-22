@@ -29,8 +29,6 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         timeBtwShots = startTimeBtwShots;
-
-        InvokeRepeating("SpawnEnemy", 5, 5);
     }
 
     void Update()
