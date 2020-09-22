@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     public GameObject EnemyObject;
     public GameObject DestructEnemyObject;
+    
 
     public Transform EnemySpawner;
     public Transform DestructEnemySpawner;
@@ -55,6 +57,6 @@ public class Spawner : MonoBehaviour
 
     void SpawnDestructEnemy()
     {
-        Instantiate(EnemyObject, DestructEnemySpawner.position, Quaternion.identity);
+        Instantiate(DestructEnemyObject, DestructEnemySpawner.position, Quaternion.identity);
     }
 }

@@ -94,9 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6f044d99a625c4f8ad5e93a1d3a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyObject: {fileID: 1598045792833026575}
-  Spawner: {fileID: 0}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 4843474723040044354, guid: 128f815e3b0dabd47bdeaf040e24c421,
+    type: 3}
   health: 50
   speed: 2
   damagePlayer: 5
