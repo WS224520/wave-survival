@@ -8,9 +8,6 @@ public class Enemy : MonoBehaviour
 {
     public Text scoreText;
 
-    public GameObject EnemyObject;
-    public Transform Spawner;
-
     //Enemy stats
     public int health = 50;
 
@@ -93,13 +90,5 @@ public class Enemy : MonoBehaviour
             Score.scoreCounter++;
             Debug.Log(Score.scoreCounter);
         }
-    }
-
-    
-    void SpawnEnemy()
-    {
-        Debug.Log("Spawn Enemy");
-        Instantiate(EnemyObject, Spawner.position, Quaternion.identity);
-    }
-    
+    }  
 }
