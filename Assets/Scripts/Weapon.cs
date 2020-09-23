@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Weapon : MonoBehaviour
 {
+    public AudioSource PistolSound;
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletTime;
@@ -25,6 +27,7 @@ public class Weapon : MonoBehaviour
             {
                 Instantiate(bulletPrefab, firePoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
+                PistolSound.Play();
             }
         }
         else
