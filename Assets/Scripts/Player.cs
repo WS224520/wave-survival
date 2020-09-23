@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GameObject gameOverUI;
+    
 
     //Movement
     public float speed;
@@ -30,6 +31,11 @@ public class Player : MonoBehaviour
 
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.x);
+    }
+
+    void Update()
+    {
+        SwitchWeapon();
     }
 
      void OnTriggerEnter2D(Collider2D collision)
@@ -91,5 +97,16 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("GameScene");
         gameOverUI.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    void SwitchWeapon()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            foreach(Transform weapon in transform)
+            {
+                weapon.gameObject.SetActive(!weapon.gameObject.activeSelf);
+            }
+        }
     }
 }
