@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GameObject gameOverUI;
-    
+    public GameObject Rifle;
+    public GameObject Pistol;
 
     //Movement
     public float speed;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Rifle.SetActive(false);
     }
 
     void FixedUpdate()
@@ -103,10 +105,15 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            foreach(Transform weapon in transform)
-            {
-                weapon.gameObject.SetActive(!weapon.gameObject.activeSelf);
-            }
+            Rifle.SetActive(true);
+            Pistol.SetActive(false);
         }
+
+        else if(Input.GetKeyDown(KeyCode.E))
+        {
+            Rifle.SetActive(false);
+            Pistol.SetActive(true);
+        }
+
     }
 }
