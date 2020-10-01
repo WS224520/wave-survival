@@ -40,9 +40,9 @@ public class Weapon : MonoBehaviour
                 Debug.Log("Pistol fire");
             }
         }
-        else if(Input.GetMouseButton(1) && player.GetComponent<Player>().WeaponSwitch == true)
+        else if(Input.GetMouseButton(0) && player.GetComponent<Player>().WeaponSwitch == true)
         {
-            Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+            //Instantiate(bulletPrefab, firePoint.position, transform.rotation);
             RifleSound.Play();
             Debug.Log("Rifle fire");
         }

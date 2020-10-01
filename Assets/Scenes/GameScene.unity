@@ -767,6 +767,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 874220040}
   Rifle: {fileID: 1625536837}
   Pistol: {fileID: 156516251}
+  WeaponSwitch: 0
   speed: 5
   moveInput: 0
   healthDisplay: {fileID: 63461759}
@@ -869,12 +870,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PistolSound: {fileID: 1400016952}
+  RifleSound: {fileID: 1286490638}
   firePoint: {fileID: 571749506}
   bulletPrefab: {fileID: 6408295901964035114, guid: e745f458501b2a743b05d2aa814a84f5,
     type: 3}
   bulletTime: 1.5
   offset: 0
   startTimeBtwShots: 0.25
+  player: {fileID: 307178222}
 --- !u!61 &307178227
 BoxCollider2D:
   m_ObjectHideFlags: 0
