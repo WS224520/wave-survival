@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public GameObject Rifle;
     public GameObject Pistol;
 
+    public bool WeaponSwitch = false;
+
     //Movement
     public float speed;
     public float moveInput;
@@ -107,12 +109,14 @@ public class Player : MonoBehaviour
         {
             Rifle.SetActive(true);
             Pistol.SetActive(false);
+            WeaponSwitch = true;
         }
 
         else if(Input.GetKeyDown(KeyCode.E))
         {
             Rifle.SetActive(false);
             Pistol.SetActive(true);
+            WeaponSwitch = false;
         }
 
     }
