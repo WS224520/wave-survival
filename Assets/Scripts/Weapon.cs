@@ -31,12 +31,18 @@ public class Weapon : MonoBehaviour
 
         if(timeBtwShots <= 0)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && player.GetComponent<Player>().WeaponSwitch == false)
             {
                 Instantiate(bulletPrefab, firePoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
                 PistolSound.Play();
+                Debug.Log("Pistol fire");
             }
+        }
+        else if(Input.GetMouseButton(0) && player.GetComponent<Player>().WeaponSwitch == true)
+        {
+            Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+            Debug.Log("Rifle fire");
         }
         else
         {
