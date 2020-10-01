@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public GameObject Rifle;
     public GameObject Pistol;
 
-    public bool WeaponSwitch = false;
+    public bool WeaponSwitch;
 
     //Movement
     public float speed;

@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class Weapon : MonoBehaviour
 {
     public AudioSource PistolSound;
+    public AudioSource RifleSound;
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletTime;
@@ -22,7 +23,7 @@ public class Weapon : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position; //Follow mouse positon
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg; //Calculates mouse position
@@ -39,9 +40,10 @@ public class Weapon : MonoBehaviour
                 Debug.Log("Pistol fire");
             }
         }
-        else if(Input.GetMouseButton(0) && player.GetComponent<Player>().WeaponSwitch == true)
+        else if(Input.GetMouseButton(1) && player.GetComponent<Player>().WeaponSwitch == true)
         {
             Instantiate(bulletPrefab, firePoint.position, transform.rotation);
+            RifleSound.Play();
             Debug.Log("Rifle fire");
         }
         else
