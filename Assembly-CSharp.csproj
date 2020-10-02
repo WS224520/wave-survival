@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\WaveTimer.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
+     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/John/Documents/GitHub/wave-survival/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
