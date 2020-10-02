@@ -13,10 +13,11 @@ public class Rifle : MonoBehaviour
 
     private float timeBtwShots;
     public float startTimeBtwShots;
+    public Player player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GetComponent<Player>();
     }
 
     // Update is called once per frame
