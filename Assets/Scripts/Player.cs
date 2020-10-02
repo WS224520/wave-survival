@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Rifle.SetActive(false);
+        GetComponent <Rifle> ().enabled = false;
     }
 
     void FixedUpdate()
@@ -109,14 +110,16 @@ public class Player : MonoBehaviour
         {
             Rifle.SetActive(true);
             Pistol.SetActive(false);
-            WeaponSwitch = true;
+            GetComponent<Rifle>().enabled = true;
+            GetComponent<Weapon>().enabled = false;
         }
 
         else if(Input.GetKeyDown(KeyCode.E))
         {
             Rifle.SetActive(false);
             Pistol.SetActive(true);
-            WeaponSwitch = false;
+            GetComponent<Rifle>().enabled = false;
+            GetComponent<Weapon>().enabled = true;
         }
 
     }

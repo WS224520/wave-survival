@@ -6,7 +6,6 @@ using UnityEngine.Audio;
 public class Weapon : MonoBehaviour
 {
     public AudioSource PistolSound;
-    public AudioSource RifleSound;
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletTime;
@@ -39,12 +38,6 @@ public class Weapon : MonoBehaviour
                 PistolSound.Play();
                 Debug.Log("Pistol fire");
             }
-        }
-        else if(Input.GetMouseButton(0) && player.GetComponent<Player>().WeaponSwitch == true)
-        {
-            //Instantiate(bulletPrefab, firePoint.position, transform.rotation);
-            RifleSound.Play();
-            Debug.Log("Rifle fire");
         }
         else
         {

@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\ObstaleSpawn.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Rifle.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SelfDestructEnemy.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
