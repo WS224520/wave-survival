@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public Text scoreText;
 
     public GameObject blood;
+    public AudioSource deathSound;
 
     //Enemy stats
     public int health = 50;
@@ -70,6 +71,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
             Instantiate(blood, transform.position, Quaternion.identity);
+            deathSound.Play();
         }
     }
 
