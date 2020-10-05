@@ -122,11 +122,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 4843474723040044354, guid: 128f815e3b0dabd47bdeaf040e24c421,
     type: 3}
-  blood: {fileID: 8898846861374665795, guid: e09bedbc58747344daa5186acba08cae, type: 3}
   health: 50
   speed: 5
-  stoppingDistance: 10
-  retreatDistance: 5
+  stoppingDistance: 5
+  retreatDistance: 7
   player: {fileID: 0}
   startTimeBtwShots: 2
   projectile: {fileID: 8781885904345408289, guid: b7920615c0c2f754296690866d3d394d,
