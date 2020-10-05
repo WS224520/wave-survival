@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 {
     public Text scoreText;
 
+    public GameObject blood;
+
     //Enemy stats
     public int health = 50;
 
@@ -67,6 +69,7 @@ public class Enemy : MonoBehaviour
         if(health <= 0)
         {
             Die();
+            Instantiate(blood, transform.position, Quaternion.identity);
         }
     }
 
