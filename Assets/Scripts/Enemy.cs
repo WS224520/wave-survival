@@ -27,6 +27,9 @@ public class Enemy : MonoBehaviour
     public float startTimeBtwShots;
     public GameObject projectile;
 
+    //Health pickup
+    public GameObject hpPickup;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -77,6 +80,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        Instantiate(hpPickup, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
     }
 
