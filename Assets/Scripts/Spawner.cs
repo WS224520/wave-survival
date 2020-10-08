@@ -12,27 +12,46 @@ public class Spawner : MonoBehaviour
     public Transform EnemySpawner;
     public Transform DestructEnemySpawner;
 
-    /*
+    
     public GameObject[] obstaclePatterns;
 
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
     public float decreaseTime;
     public float minTime = 0.65f;
-    */
+    
  
 
     void Start()
     {
+        /*
         InvokeRepeating("SpawnEnemy", 5, 5);
         InvokeRepeating("SpawnDestructEnemy", 10, 10);
+        */
     }
 
     //Spawner that picks out a random value in the array
-    void Update()
+    private void Update()
     {
 
+        if(timeBtwSpawn <= 0)
+        {
+            int rand = Random.Range(0, obstaclePatterns.Length);
+            Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
+            timeBtwSpawn = startTimeBtwSpawn;
 
+            startTimeBtwSpawn -= decreaseTime;
+            if (startTimeBtwSpawn > minTime)
+            {
+                startTimeBtwSpawn -= decreaseTime;
+            }
+        }
+
+        else
+        {
+            timeBtwSpawn -= Time.deltaTime;
+        }
+        
         /*
         int rand = Random.Range(0, obstaclePatterns.Length);
         Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
@@ -48,15 +67,7 @@ public class Spawner : MonoBehaviour
             timeBtwSpawn -= Time.deltaTime;
         }
         */
+        
     }
 
-    void SpawnEnemy()
-    {
-        Instantiate(EnemyObject, EnemySpawner.position, Quaternion.identity);
-    }
-
-    void SpawnDestructEnemy()
-    {
-        Instantiate(DestructEnemyObject, DestructEnemySpawner.position, Quaternion.identity);
-    }
 }

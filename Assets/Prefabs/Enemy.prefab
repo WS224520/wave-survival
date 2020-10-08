@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1511168912721357373}
   - component: {fileID: 1511168912721357372}
   - component: {fileID: 1511168912721357371}
-  - component: {fileID: 1511168912721357370}
+  - component: {fileID: 8140086096507586577}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Obstacle
@@ -108,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!114 &1511168912721357370
+--- !u!114 &8140086096507586577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,11 +123,12 @@ MonoBehaviour:
   scoreText: {fileID: 4843474723040044354, guid: 128f815e3b0dabd47bdeaf040e24c421,
     type: 3}
   blood: {fileID: 8898846861374665795, guid: e09bedbc58747344daa5186acba08cae, type: 3}
-  deathSound: {fileID: 0}
+  deathSound: {fileID: 8448923580570344773, guid: 288772f951078c04bae85c837d3e0b02,
+    type: 3}
   health: 50
   speed: 5
   stoppingDistance: 5
-  retreatDistance: 7
+  retreatDistance: 3
   player: {fileID: 0}
   startTimeBtwShots: 2
   projectile: {fileID: 8781885904345408289, guid: b7920615c0c2f754296690866d3d394d,
