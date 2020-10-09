@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1598045792833026575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.6402261, y: 0.6005428, z: -1.9455243}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.7648435, y: 4.515, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.89339167, b: 0.09825563, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6f044d99a625c4f8ad5e93a1d3a954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 4843474723040044354, guid: 128f815e3b0dabd47bdeaf040e24c421,
-    type: 3}
+  scoreText: {fileID: 0}
+  blood: {fileID: 8898846861374665795, guid: e09bedbc58747344daa5186acba08cae, type: 3}
   health: 50
   speed: 2
   damagePlayer: 5

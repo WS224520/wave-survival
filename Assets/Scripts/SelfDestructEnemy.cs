@@ -7,7 +7,7 @@ public class SelfDestructEnemy : MonoBehaviour
 {
 
     public Text scoreText;
-
+    public GameObject blood;
 
     //Enemy health
     public int health = 50;
@@ -69,5 +69,6 @@ public class SelfDestructEnemy : MonoBehaviour
     void Die()
     {
         Destroy(this.gameObject);
+        Instantiate(blood, transform.position, Quaternion.identity);
     }
 }

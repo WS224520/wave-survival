@@ -2139,6 +2139,12 @@ MonoBehaviour:
     type: 3}
   EnemySpawner: {fileID: 1055752766}
   DestructEnemySpawner: {fileID: 984688371}
+  obstaclePatterns:
+  - {fileID: 5643238347307372848, guid: f7cb5898347b88547a58863c3934e81e, type: 3}
+  - {fileID: 3333428448192931494, guid: 69c314e2c02766542a1debd65a4d7f7d, type: 3}
+  startTimeBtwSpawn: 5
+  decreaseTime: 0.15
+  minTime: 0.65
 --- !u!1 &1145840618
 GameObject:
   m_ObjectHideFlags: 0
