@@ -70,5 +70,11 @@ public class SelfDestructEnemy : MonoBehaviour
     {
         Destroy(this.gameObject);
         Instantiate(blood, transform.position, Quaternion.identity);
+        Invoke("BloodRemove", 1.0f);
+    }
+
+    void BloodRemove()
+    {
+        Destroy(blood.gameObject);
     }
 }
