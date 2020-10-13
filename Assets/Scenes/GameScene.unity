@@ -3410,11 +3410,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1598045792833026568, guid: 93e1dcae2b9d39a4f9e5c4c59feab383,
         type: 3}
-      propertyPath: Spawner
-      value: 
-      objectReference: {fileID: 984688371}
-    - target: {fileID: 1598045792833026568, guid: 93e1dcae2b9d39a4f9e5c4c59feab383,
-        type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1173425114}
